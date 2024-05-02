@@ -3,6 +3,9 @@ header {
     background-color: #F2F2F2;
     padding: 10px 0;
 }
+.fa-star {
+    color: rgb(240, 204, 0);
+}
 form {
     width: 60%;
     margin: 0 auto;
