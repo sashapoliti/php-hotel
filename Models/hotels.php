@@ -7,7 +7,7 @@
             'parking' => true,
             'vote' => 4,
             'distance_to_center' => 10.4,
-            'image' => './imgs/hotel1.jpg'
+            'image' => './imgs/hotel1.avif'
         ],
         [
             'id' => 2,
@@ -16,7 +16,7 @@
             'parking' => true,
             'vote' => 2,
             'distance_to_center' => 2,
-            'image' => './imgs/hotel2.jpg'
+            'image' => './imgs/hotel2.avif'
         ],
         [
             'id' => 3,
@@ -25,7 +25,7 @@
             'parking' => false,
             'vote' => 1,
             'distance_to_center' => 1,
-            'image' => './imgs/hotel3.jpg'
+            'image' => './imgs/hotel3.avif'
         ],
         [
             'id' => 4,
@@ -34,7 +34,7 @@
             'parking' => false,
             'vote' => 5,
             'distance_to_center' => 5.5,
-            'image' => './imgs/hotel4.jpg'
+            'image' => './imgs/hotel4.avif'
         ],
         [
             'id' => 5,
@@ -43,7 +43,7 @@
             'parking' => true,
             'vote' => 2,
             'distance_to_center' => 50,
-            'image' => './imgs/hotel5.jpg'
+            'image' => './imgs/hotel5.avif'
         ],
         [
             'id' => 6,
@@ -52,7 +52,7 @@
             'parking' => true,
             'vote' => 3,
             'distance_to_center' => 8,
-            'image' => './imgs/hotel6.jpg'
+            'image' => './imgs/hotel6.avif'
         ],
         [
             'id' => 7,
@@ -61,7 +61,7 @@
             'parking' => false,
             'vote' => 4,
             'distance_to_center' => 3.2,
-            'image' => './imgs/hotel7.jpg'
+            'image' => './imgs/hotel7.avif'
         ],
         [
             'id' => 8,
@@ -70,7 +70,7 @@
             'parking' => true,
             'vote' => 4,
             'distance_to_center' => 6.8,
-            'image' => './imgs/hotel8.jpg'
+            'image' => './imgs/hotel8.avif'
         ],
         [
             'id' => 9,
@@ -79,7 +79,7 @@
             'parking' => false,
             'vote' => 3,
             'distance_to_center' => 2.5,
-            'image' => './imgs/hotel9.jpg'
+            'image' => './imgs/hotel9.avif'
         ],
         [
             'id' => 10,
@@ -88,6 +88,14 @@
             'parking' => true,
             'vote' => 5,
             'distance_to_center' => 12,
-            'image' => './imgs/hotel10.jpg'
+            'image' => './imgs/hotel10.avif'
         ]
     ];
+
+    function getHotelByID($db) {
+        $hotel = array_filter($db, function ($hotel) {
+            return $hotel['id'] == $_GET['id'];
+        });
+        $detail = array_shift($hotel);
+        return $detail;
+    }

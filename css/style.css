@@ -10,3 +10,6 @@ form {
     width: 60%;
     margin: 0 auto;
 }
+main section table.table tbody tr.table-clickable {
+    cursor: pointer;
+}

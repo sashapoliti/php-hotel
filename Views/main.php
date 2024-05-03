@@ -17,7 +17,7 @@ $template = "";
 foreach ($filteredHotels as $hotel) {
     $parking = $hotel['parking'] ? 'Sì' : 'No';
     $stars = printStars($hotel['vote']);
-    $template .= "<tr onclick=\"window.location='pages/detail.php?id={$hotel['id']}';\"><td>{$hotel['name']}</td> <td>{$hotel['description']}</td> <td>{$parking}</td> <td>{$stars}</td> <td>{$hotel['distance_to_center']}</td></a>";
+    $template .= "<tr class=\"table-clickable\" onclick=\"window.location='detail.php?id={$hotel['id']}';\"><td>{$hotel['name']}</td> <td>{$hotel['description']}</td> <td>{$parking}</td> <td>{$stars}</td> <td>{$hotel['distance_to_center']}</td></a>";
 }
 ?>
 
